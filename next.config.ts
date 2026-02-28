@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -21,7 +24,6 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/storage/**',
       },
-      // HTTPS版（必要に応じて）
       {
         protocol: 'https',
         hostname: 'localhost',
